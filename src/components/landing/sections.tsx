@@ -226,8 +226,10 @@ export function ServicesSection() {
           </article>
         ))}
       </div>
+      <GoldCTA>Request Your Free Estimate</GoldCTA>
     </Section>
   );
+
 }
 
 const IDEAL_YES = [
