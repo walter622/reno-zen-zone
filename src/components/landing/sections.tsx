@@ -511,8 +511,10 @@ export function ComparisonSection() {
           </tbody>
         </table>
       </div>
+      <GoldCTA>Choose The Right Team</GoldCTA>
     </Section>
   );
+
 }
 
 const PATHWAYS = [
