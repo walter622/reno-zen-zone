@@ -1,11 +1,12 @@
-import { ArrowRight, ShieldCheck, PlayCircle } from "lucide-react";
+import { ArrowRight, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Eyebrow } from "./primitives";
 import heroImage from "@/assets/hero-bathroom.jpg";
+
 
 export function HeroSection() {
   return (
-    <section id="top" className="relative flex min-h-[100svh] items-center overflow-hidden pt-20">
+    <section id="top" className="relative flex min-h-[100svh] items-center overflow-hidden pt-28">
+
       <div className="absolute inset-0">
         <img
           src={heroImage}
@@ -20,9 +21,7 @@ export function HeroSection() {
 
       <div className="container relative z-10 mx-auto max-w-7xl px-6 py-24">
         <div className="max-w-3xl">
-          <Eyebrow className="fade-up">Owner-Led · Family Operated</Eyebrow>
-
-          <h1 className="fade-up mt-8 font-display text-4xl leading-[1.02] text-foreground md:text-6xl lg:text-7xl">
+          <h1 className="fade-up font-display text-4xl leading-[1.02] text-foreground md:text-6xl lg:text-7xl">
             Transform your home with a{" "}
             <span className="text-gold-gradient italic">high-end remodel</span>—minus the delays, the mess, and the broken promises of typical contractors.
           </h1>
@@ -45,18 +44,8 @@ export function HeroSection() {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="h-14 rounded-none border-silver/40 bg-transparent px-8 text-sm uppercase tracking-[0.2em] text-silver hover:bg-silver/5 hover:text-foreground"
-            >
-              <a href="#why">
-                <PlayCircle className="mr-2 h-4 w-4" />
-                Watch Tour
-              </a>
-            </Button>
           </div>
+
 
           <div className="fade-up mt-12 flex flex-wrap items-center gap-x-8 gap-y-4 text-xs uppercase tracking-[0.24em] text-muted-foreground">
             <span className="flex items-center gap-2">

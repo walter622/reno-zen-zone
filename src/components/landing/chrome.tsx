@@ -16,17 +16,18 @@ export function SiteHeader() {
 
   return (
     <header className="fixed top-0 z-50 w-full border-b border-border/60 bg-background/80 backdrop-blur-xl">
-      <div className="container mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
+      <div className="container mx-auto flex h-28 max-w-7xl items-center justify-between px-6">
         <a href="#top" className="flex items-center gap-3">
           <img
             src={logoAsset.url}
             alt="My Team Renovation"
-            className="h-12 w-auto"
-            width={80}
-            height={48}
+            className="h-20 w-auto md:h-24"
+            width={160}
+            height={96}
           />
           <span className="sr-only">My Team Renovation</span>
         </a>
+
 
         <nav className="hidden items-center gap-10 md:flex">
           {NAV.map((item) => (
@@ -87,7 +88,7 @@ export function SiteFooter() {
       <div className="container mx-auto max-w-7xl px-6 py-16">
         <div className="grid gap-10 md:grid-cols-3 md:items-start">
           <div>
-            <img src={logoAsset.url} alt="My Team Renovation" className="h-16 w-auto" />
+            <img src={logoAsset.url} alt="My Team Renovation" className="h-28 w-auto md:h-36" />
             <p className="mt-4 max-w-sm text-sm text-muted-foreground">
               Premium Residential Construction, Remodeling &amp; Luxury Flooring.
             </p>
