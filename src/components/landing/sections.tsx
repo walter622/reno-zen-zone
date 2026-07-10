@@ -429,8 +429,10 @@ export function ProcessSection() {
           </article>
         ))}
       </div>
+      <GoldCTA>Start Your Blueprint Today</GoldCTA>
     </Section>
   );
+
 }
 
 const COMPARISON = [
