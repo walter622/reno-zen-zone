@@ -12,7 +12,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "sonner";
-import { Section, Eyebrow, Heading } from "./primitives";
+import { Section } from "./primitives";
 
 const FAQS = [
   {
@@ -42,12 +42,7 @@ export function FaqSection() {
     <Section id="faq">
       <div className="grid gap-16 lg:grid-cols-3">
         <div className="lg:col-span-1">
-          <Eyebrow>FAQ</Eyebrow>
-          <Heading className="mt-6" as="h3">
-            Frequently asked{" "}
-            <span className="text-gold-gradient italic">questions.</span>
-          </Heading>
-          <p className="mt-6 text-muted-foreground">
+          <p className="text-muted-foreground">
             Answers to the most common questions we receive from discerning homeowners.
           </p>
         </div>
@@ -125,12 +120,7 @@ export function ContactFormSection() {
     <Section id="contact" className="bg-obsidian">
       <div className="mx-auto max-w-4xl">
         <div className="text-center">
-          <Eyebrow className="justify-center">Application Form</Eyebrow>
-          <Heading className="mt-6">
-            Ready to transform your property with{" "}
-            <span className="text-gold-gradient italic">absolute certainty?</span>
-          </Heading>
-          <p className="mt-6 text-muted-foreground">
+          <p className="text-muted-foreground">
             Fill out the brief form below and Leonardo will reach out directly to discuss your project.
           </p>
         </div>
@@ -238,10 +228,6 @@ export function FinalCtaSection() {
   return (
     <Section className="border-y border-border">
       <div className="mx-auto max-w-4xl text-center">
-        <Heading>
-          Don't put off your family's comfort out of fear of{" "}
-          <span className="text-gold-gradient italic">contractor delays.</span>
-        </Heading>
         <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
           My Team Renovation delivers master-level craftsmanship, efficient timelines, and the personal respect your home deserves.
         </p>
