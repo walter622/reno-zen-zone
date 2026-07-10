@@ -32,13 +32,6 @@ const WHY_BULLETS = [
 export function WhyChooseSection() {
   return (
     <Section id="why" className="bg-obsidian">
-      <div className="mx-auto max-w-3xl text-center">
-        <Eyebrow className="justify-center">Explainer Video · Before &amp; After</Eyebrow>
-        <Heading className="mt-6">
-          Why Choose <span className="text-gold-gradient italic">My Team Renovation?</span>
-        </Heading>
-      </div>
-
       <div className="mt-16 grid gap-12 lg:grid-cols-5 lg:gap-16">
         <div className="lg:col-span-3">
           <div className="group relative aspect-video overflow-hidden bg-card ring-1 ring-border">
@@ -128,12 +121,6 @@ const LATE_LESSONS = [
 export function LateLessonsSection() {
   return (
     <Section id="lessons">
-      <div className="mx-auto max-w-3xl">
-        <Eyebrow>Learned The Hard Way</Eyebrow>
-        <Heading className="mt-6">
-          What US homeowners learn <span className="text-gold-gradient italic">too late</span> about contractors
-        </Heading>
-      </div>
       <div className="mt-14 grid gap-6 md:grid-cols-2">
         {LATE_LESSONS.map((item) => (
           <article
@@ -158,11 +145,6 @@ export function ValuePropositionSection() {
   return (
     <Section id="value" className="bg-obsidian">
       <div className="mx-auto max-w-4xl text-center">
-        <Eyebrow className="justify-center">Our Unique Value Proposition</Eyebrow>
-        <Heading className="mt-6">
-          We deliver your dream remodel on{" "}
-          <span className="text-gold-gradient italic">the fastest timelines</span>—with flawless execution and absolute respect for your home.
-        </Heading>
         <GoldRule className="mx-auto mt-10 w-24" />
         <p className="mt-10 text-base leading-relaxed text-muted-foreground md:text-lg">
           While the American remodeling market forces you to choose between rigid bureaucratic corporations and disorganized independent crews, My Team Renovation brings the perfect balance: the precision and punctuality of corporate project management, backed by the care and dedication of a family-owned local business.
@@ -204,13 +186,6 @@ const SERVICES = [
 export function ServicesSection() {
   return (
     <Section id="services">
-      <div className="mx-auto max-w-3xl">
-        <Eyebrow>Core Services</Eyebrow>
-        <Heading className="mt-6">
-          High-impact areas that maximize the value of{" "}
-          <span className="text-gold-gradient italic">premium properties.</span>
-        </Heading>
-      </div>
       <div className="mt-14 grid gap-6 md:grid-cols-2">
         {SERVICES.map(({ icon: Icon, title, text }) => (
           <article
@@ -248,14 +223,6 @@ const IDEAL_NO = [
 export function IdealClientSection() {
   return (
     <Section id="ideal" className="bg-obsidian">
-      <div className="mx-auto max-w-3xl">
-        <Eyebrow>Ideal Client</Eyebrow>
-        <Heading className="mt-6">
-          Tailor-made for{" "}
-          <span className="text-gold-gradient italic">discerning homeowners.</span>
-        </Heading>
-      </div>
-
       <div className="mt-14 grid gap-10 md:grid-cols-2">
         <div className="border border-gold/30 bg-card/40 p-10">
           <p className="text-xs uppercase tracking-[0.24em] text-gold">Made For</p>
@@ -310,13 +277,6 @@ const RISKS = [
 export function RisksSection() {
   return (
     <Section id="risks">
-      <div className="mx-auto max-w-3xl">
-        <Eyebrow>What's Truly At Risk</Eyebrow>
-        <Heading className="mt-6">
-          Choosing impersonal or cut-rate contractors exposes your home to{" "}
-          <span className="text-gold-gradient italic">serious liabilities.</span>
-        </Heading>
-      </div>
       <div className="mt-14 space-y-4">
         {RISKS.map((risk, i) => (
           <article
@@ -373,13 +333,6 @@ const PRECISION = [
 export function PrecisionSection() {
   return (
     <Section id="precision" className="bg-obsidian">
-      <div className="mx-auto max-w-3xl">
-        <Eyebrow>Corporate Precision, Local Accountability</Eyebrow>
-        <Heading className="mt-6">
-          Professional project management delivered{" "}
-          <span className="text-gold-gradient italic">to your doorstep.</span>
-        </Heading>
-      </div>
       <ul className="mt-14 grid gap-6 md:grid-cols-2">
         {PRECISION.map((item) => (
           <li key={item.label} className="border-l border-gold/40 bg-card/40 p-6">
@@ -409,14 +362,6 @@ const STEPS = [
 export function ProcessSection() {
   return (
     <Section id="process">
-      <div className="mx-auto max-w-3xl">
-        <Eyebrow>Our Blueprint</Eyebrow>
-        <Heading className="mt-6">
-          The step-by-step remodeling{" "}
-          <span className="text-gold-gradient italic">blueprint.</span>
-        </Heading>
-      </div>
-
       <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {STEPS.map((step) => (
           <article
@@ -471,14 +416,6 @@ const COMPARISON = [
 export function ComparisonSection() {
   return (
     <Section id="compare" className="bg-obsidian">
-      <div className="mx-auto max-w-3xl text-center">
-        <Eyebrow className="justify-center">MTR vs. The Competition</Eyebrow>
-        <Heading className="mt-6">
-          See the difference{" "}
-          <span className="text-gold-gradient italic">side by side.</span>
-        </Heading>
-      </div>
-
       <div className="mt-14 overflow-x-auto">
         <table className="w-full min-w-[720px] border-collapse text-left">
           <thead>
@@ -537,11 +474,6 @@ export function PathwaysAndEmotionSection() {
     <Section id="value-add">
       <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
         <div>
-          <Eyebrow>Practical Pathways</Eyebrow>
-          <Heading className="mt-6" as="h3">
-            Increase your home's{" "}
-            <span className="text-gold-gradient italic">value.</span>
-          </Heading>
           <ul className="mt-10 space-y-6">
             {PATHWAYS.map((item, i) => (
               <li key={item.title} className="flex gap-5">
@@ -558,11 +490,6 @@ export function PathwaysAndEmotionSection() {
         </div>
 
         <div>
-          <Eyebrow>The Emotional Payoff</Eyebrow>
-          <Heading className="mt-6" as="h3">
-            The pride of owning a{" "}
-            <span className="text-gold-gradient italic">magnificent sanctuary.</span>
-          </Heading>
           <p className="mt-4 text-muted-foreground">
             Because at the end of the day, a beautifully remodeled home is about how it makes your family feel.
           </p>
@@ -588,11 +515,6 @@ export function EstimateCallSection() {
       <div className="relative overflow-hidden border border-gold/40 bg-gradient-to-br from-card via-obsidian to-card p-12 md:p-20">
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold to-transparent" />
         <div className="mx-auto max-w-3xl text-center">
-          <Eyebrow className="justify-center">Request Your Estimate</Eyebrow>
-          <Heading className="mt-6">
-            Before we outline any project, we take the time to fully understand your{" "}
-            <span className="text-gold-gradient italic">design goals.</span>
-          </Heading>
           <p className="mt-8 text-base leading-relaxed text-muted-foreground md:text-lg">
             Schedule an initial site consultation to unlock the potential of your current space and establish an efficient, guaranteed timeline for construction.
           </p>
