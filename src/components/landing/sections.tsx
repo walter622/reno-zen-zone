@@ -371,47 +371,28 @@ const PRECISION = [
 export function PrecisionSection() {
   return (
     <Section id="precision" className="bg-obsidian">
-      <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
-        <div className="relative">
-          <div className="overflow-hidden">
-            <img
-              src={leonardoImage}
-              alt="Leonardo Brandão — owner and project manager"
-              className="w-full object-cover"
-              loading="lazy"
-              width={1200}
-              height={1400}
-            />
-          </div>
-          <div className="absolute -bottom-6 left-6 right-6 border-l-2 border-gold bg-obsidian/95 p-6 backdrop-blur md:left-auto md:right-auto md:-bottom-8 md:w-80 md:p-8">
-            <p className="text-xs uppercase tracking-[0.24em] text-gold">Leonardo Brandão</p>
-            <p className="mt-2 font-display text-xl text-foreground">
-              On your job site. Every day. No exceptions.
-            </p>
-          </div>
-        </div>
-
-        <div>
-          <Eyebrow>Corporate Precision, Local Accountability</Eyebrow>
-          <Heading className="mt-6">
-            Professional project management delivered{" "}
-            <span className="text-gold-gradient italic">to your doorstep.</span>
-          </Heading>
-          <ul className="mt-10 space-y-6">
-            {PRECISION.map((item) => (
-              <li key={item.label} className="border-l border-gold/40 pl-6">
-                <p className="text-xs uppercase tracking-[0.24em] text-gold">{item.label}</p>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground md:text-base">
-                  {item.text}
-                </p>
-              </li>
-            ))}
-          </ul>
-        </div>
+      <div className="mx-auto max-w-3xl">
+        <Eyebrow>Corporate Precision, Local Accountability</Eyebrow>
+        <Heading className="mt-6">
+          Professional project management delivered{" "}
+          <span className="text-gold-gradient italic">to your doorstep.</span>
+        </Heading>
       </div>
+      <ul className="mt-14 grid gap-6 md:grid-cols-2">
+        {PRECISION.map((item) => (
+          <li key={item.label} className="border-l border-gold/40 bg-card/40 p-6">
+            <p className="text-xs uppercase tracking-[0.24em] text-gold">{item.label}</p>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground md:text-base">
+              {item.text}
+            </p>
+          </li>
+        ))}
+      </ul>
+      <GoldCTA>Work Directly With The Owner</GoldCTA>
     </Section>
   );
 }
+
 
 const STEPS = [
   { n: "01", title: "Dedicated One-on-One Consultation", text: "We map out your exact aesthetic goals, design preferences, and functional needs with Leonardo directly." },
