@@ -5,7 +5,8 @@ import heroImage from "@/assets/hero-bathroom.jpg";
 
 export function HeroSection() {
   return (
-    <section id="top" className="relative flex min-h-[100svh] items-center overflow-hidden pt-20">
+    <section id="top" className="relative flex min-h-[100svh] items-center overflow-hidden pt-28">
+
       <div className="absolute inset-0">
         <img
           src={heroImage}

@@ -13,9 +13,9 @@ import {
   X,
   ArrowRight,
 } from "lucide-react";
-import { Section, Eyebrow, Heading, GoldRule } from "./primitives";
+import { Section, Eyebrow, Heading, GoldRule, GoldCTA } from "./primitives";
 import kitchenImage from "@/assets/kitchen-luxury.jpg";
-import leonardoImage from "@/assets/leonardo-portrait.jpg";
+
 
 const WHY_BULLETS = [
   { icon: Bath, text: "Specialized Bathroom Remodeling — full-service residential transformations." },
@@ -95,10 +95,12 @@ export function WhyChooseSection() {
         <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
           Impersonal corporate contractors ignore your calls, push back schedules, and go silent when you need them most. My Team Renovation stands as the trusted partner for families and professionals who demand elite standards of premium craftsmanship—without sacrificing a seamless, personalized, and stress-free experience.
         </p>
+        <GoldCTA>Schedule Your Consultation</GoldCTA>
       </div>
     </Section>
   );
 }
+
 
 const LATE_LESSONS = [
   {
