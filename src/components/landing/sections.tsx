@@ -576,8 +576,10 @@ export function PathwaysAndEmotionSection() {
           </ul>
         </div>
       </div>
+      <GoldCTA>Elevate Your Home</GoldCTA>
     </Section>
   );
+
 }
 
 export function EstimateCallSection() {
