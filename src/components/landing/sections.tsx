@@ -13,7 +13,7 @@ import {
   X,
   ArrowRight,
 } from "lucide-react";
-import { Section, Eyebrow, Heading, GoldRule, GoldCTA } from "./primitives";
+import { Section, GoldRule, GoldCTA } from "./primitives";
 import kitchenImage from "@/assets/kitchen-luxury.jpg";
 
 
