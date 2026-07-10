@@ -23,7 +23,7 @@ export function HeroSection() {
         <div className="max-w-3xl">
           <h1 className="fade-up font-display text-4xl leading-[1.02] text-foreground md:text-6xl lg:text-7xl">
             Transform your home with a{" "}
-            <span className="text-gold-gradient italic">high-end remodel</span>,minus the delays, the mess, and the broken promises of typical contractors.
+            <span className="text-gold-gradient italic">high-end remodel</span>, minus the delays, the mess, and the broken promises of typical contractors.
           </h1>
 
           <p className="fade-up mt-8 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
