@@ -30,11 +30,11 @@ export const Route = createFileRoute("/")({
         content:
           "Luxury bathroom, kitchen, flooring, and custom carpentry remodels delivered on the fastest timelines in the market. Owner-led project management by Leonardo Brandão. 1-year warranty.",
       },
-      { property: "og:title", content: "My Team Renovation — Premium Home Remodeling" },
+      { property: "og:title", content: "My Team Renovation — Premium Home Remodeling, Owner-Led" },
       {
         property: "og:description",
         content:
-          "Bathrooms remodeled in 5 days. Direct line to the owner. Meticulous daily cleanups. 1-year structural warranty.",
+          "Luxury bathroom, kitchen, flooring, and custom carpentry remodels delivered on the fastest timelines in the market. Owner-led project management by Leonardo Brandão. 1-year warranty.",
       },
       { property: "og:url", content: "/" },
     ],

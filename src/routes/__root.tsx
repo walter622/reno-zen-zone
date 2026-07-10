@@ -81,18 +81,22 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Luxury bathroom, kitchen, flooring, and custom carpentry remodels delivered on the fastest timelines in the market. Owner-led project management by Leonardo Brandão.",
+          "Luxury bathroom, kitchen, flooring, and custom carpentry remodels delivered on the fastest timelines in the market. Owner-led project management by Leonardo Brandão. 1-year warranty.",
       },
       { name: "author", content: "My Team Renovation" },
-      { property: "og:title", content: "My Team Renovation — Premium Home Remodeling" },
+      { property: "og:title", content: "My Team Renovation — Premium Home Remodeling, Owner-Led" },
       {
         property: "og:description",
         content:
-          "Bathrooms remodeled in 5 days. Direct line to the owner. Meticulous daily cleanups. 1-year structural warranty.",
+          "Luxury bathroom, kitchen, flooring, and custom carpentry remodels delivered on the fastest timelines in the market. Owner-led project management by Leonardo Brandão. 1-year warranty.",
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "My Team Renovation" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "My Team Renovation — Premium Home Remodeling, Owner-Led" },
+      { name: "twitter:description", content: "Luxury bathroom, kitchen, flooring, and custom carpentry remodels delivered on the fastest timelines in the market. Owner-led project management by Leonardo Brandão. 1-year warranty." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6f51a58e-3056-484c-b02e-a1b124856efb/id-preview-576f4a83--f5e16a1f-6fd7-4fa9-a85d-a69e8cf7ae18.lovable.app-1783715987209.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6f51a58e-3056-484c-b02e-a1b124856efb/id-preview-576f4a83--f5e16a1f-6fd7-4fa9-a85d-a69e8cf7ae18.lovable.app-1783715987209.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
