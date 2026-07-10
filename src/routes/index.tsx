@@ -1,24 +1,71 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Toaster } from "@/components/ui/sonner";
+import { SiteHeader, SiteFooter } from "@/components/landing/chrome";
+import { HeroSection } from "@/components/landing/hero";
+import {
+  WhyChooseSection,
+  LateLessonsSection,
+  ValuePropositionSection,
+  ServicesSection,
+  IdealClientSection,
+  RisksSection,
+  PrecisionSection,
+  ProcessSection,
+  ComparisonSection,
+  PathwaysAndEmotionSection,
+  EstimateCallSection,
+} from "@/components/landing/sections";
+import {
+  FaqSection,
+  ContactFormSection,
+  FinalCtaSection,
+} from "@/components/landing/interactive";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "My Team Renovation — Premium Home Remodeling, Owner-Led" },
+      {
+        name: "description",
+        content:
+          "Luxury bathroom, kitchen, flooring, and custom carpentry remodels delivered on the fastest timelines in the market. Owner-led project management by Leonardo Brandão. 1-year warranty.",
+      },
+      { property: "og:title", content: "My Team Renovation — Premium Home Remodeling" },
+      {
+        property: "og:description",
+        content:
+          "Bathrooms remodeled in 5 days. Direct line to the owner. Meticulous daily cleanups. 1-year structural warranty.",
+      },
+      { property: "og:url", content: "/" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background text-foreground">
+      <SiteHeader />
+      <main>
+        <HeroSection />
+        <WhyChooseSection />
+        <LateLessonsSection />
+        <ValuePropositionSection />
+        <ServicesSection />
+        <IdealClientSection />
+        <RisksSection />
+        <PrecisionSection />
+        <ProcessSection />
+        <ComparisonSection />
+        <PathwaysAndEmotionSection />
+        <EstimateCallSection />
+        <FaqSection />
+        <ContactFormSection />
+        <FinalCtaSection />
+      </main>
+      <SiteFooter />
+      <Toaster theme="dark" position="top-center" />
     </div>
   );
 }
