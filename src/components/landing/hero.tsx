@@ -20,7 +20,7 @@ export function HeroSection() {
       </div>
 
       <div className="container relative z-10 mx-auto max-w-7xl px-6 py-24">
-        <div className="max-w-2xl rounded-sm border border-gold/20 bg-background/75 p-8 shadow-2xl backdrop-blur-md md:p-12">
+        <div className="max-w-2xl rounded-sm border border-gold/30 bg-background/92 p-8 shadow-2xl backdrop-blur-md md:p-12">
           <h1 className="fade-up font-display text-4xl leading-[1.02] text-foreground md:text-5xl lg:text-6xl">
             Transform your home with a{" "}
             <span className="text-gold-gradient italic">high-end remodel{"\u00a0"}</span>
