@@ -9,10 +9,10 @@ export function HeroSection() {
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Modern kitchen remodel by My Team Renovation"
-          className="h-full w-full object-cover brightness-[1.2] contrast-[1.1] saturate-[1.1]"
-          width={1512}
-          height={850}
+          alt="Luxury kitchen remodel by My Team Renovation"
+          className="h-full w-full object-cover brightness-[1.05] contrast-[1.05] saturate-[1.05]"
+          width={1600}
+          height={1200}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/55 via-background/10 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-background/35 via-transparent to-transparent" />
