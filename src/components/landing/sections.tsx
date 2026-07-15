@@ -427,7 +427,7 @@ export function ComparisonSection() {
                 Handyman
               </th>
               <th className="py-5 px-4 text-xs uppercase tracking-[0.2em] text-muted-foreground">
-                Large Firm
+                Large Contractor Companies
               </th>
               <th className="py-5 pl-4 text-xs uppercase tracking-[0.2em] text-gold">
                 My Team Renovation
