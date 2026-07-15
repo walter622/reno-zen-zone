@@ -16,7 +16,7 @@ export function HeroSection() {
           width={1600}
           height={1200}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/55 to-background/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-background/30 to-transparent" />
       </div>
 
       <div className="container relative z-10 mx-auto max-w-7xl px-6 py-24">
