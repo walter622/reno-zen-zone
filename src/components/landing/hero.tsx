@@ -12,27 +12,26 @@ export function HeroSection() {
         <img
           src={heroImage}
           alt="Luxury kitchen remodel by My Team Renovation"
-          className="h-full w-full object-cover brightness-[1.05] contrast-[1.05] saturate-[1.05]"
+          className="h-full w-full object-cover brightness-[1.6] contrast-[1.45] saturate-[1.2]"
           width={1600}
           height={1200}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/55 via-background/10 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/35 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/8 via-white/4 to-transparent" />
       </div>
 
       <div className="container relative z-10 mx-auto max-w-7xl px-6 py-24">
-        <div className="max-w-3xl drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]">
-          <h1 className="fade-up font-display text-4xl leading-[1.02] text-foreground md:text-6xl lg:text-7xl">
+        <div className="max-w-3xl">
+          <h1 className="fade-up font-display text-4xl leading-[1.02] text-foreground drop-shadow-[0_1px_3px_rgba(255,255,255,0.6)] md:text-6xl lg:text-7xl">
             Transform your home with a{" "}
             <span className="text-gold-gradient italic">high-end remodel{"\u00a0"}</span>
             -{"\u00a0"}minus the delays, the mess, and the broken promises of typical contractors.
           </h1>
 
-          <p className="fade-up mt-8 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-            Homeowners who value exceptional quality know the true value of their time and property. With large firms you become another number on a spreadsheet, trapped in voicemail, endless emails, and a revolving door of workers.
+          <p className="fade-up mt-8 max-w-2xl text-base leading-relaxed text-foreground drop-shadow-[0_1px_2px_rgba(255,255,255,0.5)] md:text-lg">
+            Homeowners who value exceptional quality know the true value of their time and property. With large contractor companies you become another number on a spreadsheet, trapped in voicemail, endless emails, and a revolving door of workers.
           </p>
-          <p className="fade-up mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-            <span className="text-foreground">My Team Renovation eliminates this headache.</span> Locally owned and family-operated, we combine rigorous project management with a direct line to the person in charge, from start to finish.
+          <p className="fade-up mt-4 max-w-2xl text-base leading-relaxed text-foreground drop-shadow-[0_1px_2px_rgba(255,255,255,0.5)] md:text-lg">
+            <span className="font-semibold text-gold">My Team Renovation eliminates this headache.</span> Locally owned and family-operated, we combine rigorous project management with a direct line to the person in charge, from start to finish.
           </p>
 
           <div className="fade-up mt-10 flex flex-wrap items-center gap-4">
