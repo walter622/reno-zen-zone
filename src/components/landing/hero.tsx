@@ -1,7 +1,8 @@
 import { ArrowRight, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-bathroom.jpg";
+import heroImageAsset from "@/assets/hero-kitchen.jpg.asset.json";
 
+const heroImage = heroImageAsset.url;
 
 export function HeroSection() {
   return (
@@ -10,10 +11,10 @@ export function HeroSection() {
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Luxury master bathroom remodel by My Team Renovation"
+          alt="Modern kitchen remodel by My Team Renovation"
           className="h-full w-full object-cover"
-          width={1920}
-          height={1280}
+          width={1512}
+          height={850}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/40" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/60" />
