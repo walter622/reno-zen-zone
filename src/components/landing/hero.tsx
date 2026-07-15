@@ -1,6 +1,8 @@
 import { ArrowRight, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/kitchen-luxury.jpg";
+import heroImageAsset from "@/assets/hero-kitchen-new.jpg.asset.json";
+
+const heroImage = heroImageAsset.url;
 
 export function HeroSection() {
   return (
