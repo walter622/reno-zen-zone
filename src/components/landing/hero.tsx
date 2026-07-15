@@ -19,7 +19,7 @@ export function HeroSection() {
       </div>
 
       <div className="container relative z-10 mx-auto max-w-7xl px-6 py-24">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]">
           <h1 className="fade-up font-display text-4xl leading-[1.02] text-foreground md:text-6xl lg:text-7xl">
             Transform your home with a{" "}
             <span className="text-gold-gradient italic">high-end remodel{"\u00a0"}</span>
