@@ -12,12 +12,12 @@ export function HeroSection() {
         <img
           src={heroImage}
           alt="Modern kitchen remodel by My Team Renovation"
-          className="h-full w-full object-cover brightness-110 contrast-105"
+          className="h-full w-full object-cover brightness-[1.15] contrast-[1.08] saturate-[1.05]"
           width={1512}
           height={850}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/45 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-background/25" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/25 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-background/10" />
       </div>
 
       <div className="container relative z-10 mx-auto max-w-7xl px-6 py-24">
