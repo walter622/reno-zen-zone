@@ -12,16 +12,16 @@ export function HeroSection() {
         <img
           src={heroImage}
           alt="Luxury kitchen remodel by My Team Renovation"
-          className="h-full w-full object-cover brightness-[1.05] contrast-[1.05] saturate-[1.05]"
+          className="h-full w-full object-cover brightness-[1.15] contrast-[1.1] saturate-[1.08]"
           width={1600}
           height={1200}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/55 via-background/10 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/35 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/25 via-background/5 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/15 via-transparent to-transparent" />
       </div>
 
       <div className="container relative z-10 mx-auto max-w-7xl px-6 py-24">
-        <div className="max-w-3xl drop-shadow-[0_2px_6px_rgba(0,0,0,0.55)]">
+        <div className="max-w-3xl drop-shadow-[0_1px_3px_rgba(0,0,0,0.35)]">
           <h1 className="fade-up font-display text-4xl leading-[1.02] text-foreground md:text-6xl lg:text-7xl">
             Transform your home with a{" "}
             <span className="text-gold-gradient italic">high-end remodel{"\u00a0"}</span>
