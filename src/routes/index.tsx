@@ -54,11 +54,13 @@ function Index() {
         <LateLessonsSection />
         <ValuePropositionSection />
         <ServicesSection />
+        <PortfolioSection />
         <IdealClientSection />
         <RisksSection />
         <PrecisionSection />
         <ProcessSection />
         <ComparisonSection />
+        <TestimonialsSection />
         <PathwaysAndEmotionSection />
         <EstimateCallSection />
         <FaqSection />
