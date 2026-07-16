@@ -138,11 +138,11 @@ export function ContactFormSection() {
         ) : (
           <form
             onSubmit={onSubmit}
-            className="mt-14 border border-border bg-card/40 p-8 md:p-12"
+            className="mt-14 rounded-2xl border border-white/10 bg-[#0f1a2b] p-8 shadow-2xl md:p-10"
           >
-            <div className="grid gap-6 md:grid-cols-2">
-              <div className="space-y-2 md:col-span-2">
-                <Label htmlFor="name" className="text-xs uppercase tracking-[0.2em] text-gold">
+            <div className="space-y-5">
+              <div className="space-y-2">
+                <Label htmlFor="name" className="text-sm font-medium text-white">
                   Full Name
                 </Label>
                 <Input
@@ -150,11 +150,33 @@ export function ContactFormSection() {
                   name="name"
                   required
                   autoComplete="name"
-                  className="h-12 rounded-none border-border bg-obsidian text-foreground focus-visible:ring-gold"
+                  placeholder="Your full name"
+                  className="h-12 rounded-lg border-white/10 bg-[#152238] text-foreground placeholder:text-muted-foreground/60 focus-visible:ring-gold"
                 />
               </div>
+
               <div className="space-y-2">
-                <Label htmlFor="email" className="text-xs uppercase tracking-[0.2em] text-gold">
+                <Label htmlFor="phone" className="text-sm font-medium text-white">
+                  WhatsApp
+                </Label>
+                <div className="flex gap-2">
+                  <div className="flex h-12 w-16 items-center justify-center rounded-lg border border-white/10 bg-[#152238] text-sm text-foreground">
+                    +1
+                  </div>
+                  <Input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    required
+                    autoComplete="tel"
+                    placeholder="(000) 000-0000"
+                    className="h-12 flex-1 rounded-lg border-white/10 bg-[#152238] text-foreground placeholder:text-muted-foreground/60 focus-visible:ring-gold"
+                  />
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="email" className="text-sm font-medium text-white">
                   Email Address
                 </Label>
                 <Input
@@ -163,26 +185,14 @@ export function ContactFormSection() {
                   type="email"
                   required
                   autoComplete="email"
-                  className="h-12 rounded-none border-border bg-obsidian text-foreground focus-visible:ring-gold"
-                />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="phone" className="text-xs uppercase tracking-[0.2em] text-gold">
-                  Phone Number
-                </Label>
-                <Input
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  required
-                  autoComplete="tel"
-                  className="h-12 rounded-none border-border bg-obsidian text-foreground focus-visible:ring-gold"
+                  placeholder="you@example.com"
+                  className="h-12 rounded-lg border-white/10 bg-[#152238] text-foreground placeholder:text-muted-foreground/60 focus-visible:ring-gold"
                 />
               </div>
             </div>
 
             <fieldset className="mt-8">
-              <legend className="text-xs uppercase tracking-[0.2em] text-gold">
+              <legend className="text-sm font-medium text-white">
                 Remodeling Service Needed
               </legend>
               <div className="mt-4 grid gap-3 sm:grid-cols-2">
@@ -191,10 +201,10 @@ export function ContactFormSection() {
                   return (
                     <label
                       key={s}
-                      className={`flex cursor-pointer items-center gap-3 border px-4 py-3 transition-colors ${
+                      className={`flex cursor-pointer items-center gap-3 rounded-lg border px-4 py-3 transition-colors ${
                         checked
                           ? "border-gold bg-gold/5 text-foreground"
-                          : "border-border bg-obsidian text-muted-foreground hover:border-gold/40"
+                          : "border-white/10 bg-[#152238] text-muted-foreground hover:border-gold/40"
                       }`}
                     >
                       <Checkbox
@@ -212,13 +222,14 @@ export function ContactFormSection() {
             <Button
               type="submit"
               disabled={submitting}
-              className="mt-10 h-14 w-full rounded-none bg-gold-gradient text-sm uppercase tracking-[0.2em] text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-95"
+              className="mt-10 h-14 w-full rounded-lg bg-gold-gradient text-sm uppercase tracking-[0.2em] text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-95"
             >
               {submitting ? "Sending…" : "Connect Directly with My Team Renovation"}
               <ArrowRight className="ml-3 h-4 w-4" />
             </Button>
           </form>
         )}
+
       </div>
     </Section>
   );
