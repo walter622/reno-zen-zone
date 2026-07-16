@@ -20,6 +20,7 @@ import {
   ContactFormSection,
   FinalCtaSection,
 } from "@/components/landing/interactive";
+import { PortfolioSection, TestimonialsSection } from "@/components/landing/portfolio";
 
 export const Route = createFileRoute("/")({
   head: () => ({
