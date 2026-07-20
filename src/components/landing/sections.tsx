@@ -350,16 +350,29 @@ const PRECISION = [
 export function PrecisionSection() {
   return (
     <Section id="precision" className="bg-obsidian">
-      <ul className="mt-14 grid gap-6 md:grid-cols-2">
-        {PRECISION.map((item) => (
-          <li key={item.label} className="border-l border-gold/40 bg-card/40 p-6">
-            <p className="text-xs uppercase tracking-[0.24em] text-gold">{item.label}</p>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground md:text-base">
-              {item.text}
-            </p>
-          </li>
-        ))}
-      </ul>
+      <div className="grid gap-12 lg:grid-cols-5 lg:gap-14">
+        <div className="lg:col-span-3">
+          <ul className="grid gap-6 sm:grid-cols-2">
+            {PRECISION.map((item) => (
+              <li key={item.label} className="border-l border-gold/40 bg-card/40 p-6">
+                <p className="text-xs uppercase tracking-[0.24em] text-gold">{item.label}</p>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground md:text-base">
+                  {item.text}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="relative aspect-[4/5] overflow-hidden ring-1 ring-border lg:col-span-2">
+          <img
+            src={kitchenDark.url}
+            alt="Custom dark cabinet kitchen"
+            loading="lazy"
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-obsidian/70 via-transparent to-transparent" />
+        </div>
+      </div>
       <GoldCTA>Work Directly With The Owner</GoldCTA>
     </Section>
   );
