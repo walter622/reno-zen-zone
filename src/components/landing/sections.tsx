@@ -16,7 +16,6 @@ import {
 import { Section, GoldRule, GoldCTA } from "./primitives";
 import kitchenImage from "@/assets/kitchen-luxury.jpg";
 import bathMarble from "@/assets/portfolio-bath-marble.jpg.asset.json";
-import bathMaster from "@/assets/portfolio-bath-master.jpg.asset.json";
 import bathSubway from "@/assets/portfolio-bath-subway.jpg.asset.json";
 import kitchenDark from "@/assets/portfolio-kitchen-dark.jpg.asset.json";
 import stairs from "@/assets/portfolio-stairs.jpg.asset.json";
