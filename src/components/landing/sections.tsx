@@ -15,6 +15,11 @@ import {
 } from "lucide-react";
 import { Section, GoldRule, GoldCTA } from "./primitives";
 import kitchenImage from "@/assets/kitchen-luxury.jpg";
+import bathMarble from "@/assets/portfolio-bath-marble.jpg.asset.json";
+import bathSubway from "@/assets/portfolio-bath-subway.jpg.asset.json";
+import kitchenDark from "@/assets/portfolio-kitchen-dark.jpg.asset.json";
+import stairs from "@/assets/portfolio-stairs.jpg.asset.json";
+import floorWood from "@/assets/portfolio-floor-wood.jpg.asset.json";
 
 
 const WHY_BULLETS = [
@@ -144,17 +149,28 @@ export function LateLessonsSection() {
 export function ValuePropositionSection() {
   return (
     <Section id="value" className="bg-obsidian">
-      <div className="mx-auto max-w-4xl text-center">
-        <GoldRule className="mx-auto mt-10 w-24" />
-        <p className="mt-10 text-base leading-relaxed text-muted-foreground md:text-lg">
-          While the American remodeling market forces you to choose between rigid bureaucratic corporations and disorganized independent crews, My Team Renovation brings the perfect balance: the precision and punctuality of corporate project management, backed by the care and dedication of a family-owned local business.
-        </p>
-        <p className="mt-8 font-display text-2xl leading-snug text-foreground md:text-3xl">
-          Our promise is simple: to elevate your living space while completely removing the stress of remodeling.
-        </p>
-        <p className="mt-8 text-base leading-relaxed text-muted-foreground md:text-lg">
-          You will never be left hanging by an unanswered voicemail. We plan every phase down to the millimeter so you know exactly when the project will be handed over—with zero surprises and zero excuses. You aren't paying for labor. You are investing in a seamless, secure transformation that instantly boosts your home's market value.
-        </p>
+      <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="relative aspect-[4/5] overflow-hidden ring-1 ring-border">
+          <img
+            src={bathMarble.url}
+            alt="Marble bathroom with round mirror"
+            loading="lazy"
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-tr from-obsidian/60 via-transparent to-transparent" />
+        </div>
+        <div>
+          <GoldRule className="w-24" />
+          <p className="mt-8 text-base leading-relaxed text-muted-foreground md:text-lg">
+            While the American remodeling market forces you to choose between rigid bureaucratic corporations and disorganized independent crews, My Team Renovation brings the perfect balance: the precision and punctuality of corporate project management, backed by the care and dedication of a family-owned local business.
+          </p>
+          <p className="mt-8 font-display text-2xl leading-snug text-foreground md:text-3xl">
+            Our promise is simple: to elevate your living space while completely removing the stress of remodeling.
+          </p>
+          <p className="mt-8 text-base leading-relaxed text-muted-foreground md:text-lg">
+            You will never be left hanging by an unanswered voicemail. We plan every phase down to the millimeter so you know exactly when the project will be handed over—with zero surprises and zero excuses.
+          </p>
+        </div>
       </div>
     </Section>
   );
@@ -223,28 +239,48 @@ const IDEAL_NO = [
 export function IdealClientSection() {
   return (
     <Section id="ideal" className="bg-obsidian">
-      <div className="mt-14 grid gap-10 md:grid-cols-2">
-        <div className="border border-gold/30 bg-card/40 p-10">
-          <p className="text-xs uppercase tracking-[0.24em] text-gold">Made For</p>
-          <ul className="mt-6 space-y-4">
-            {IDEAL_YES.map((item) => (
-              <li key={item} className="flex items-start gap-3 text-foreground/90">
-                <Check className="mt-1 h-5 w-5 flex-shrink-0 text-gold" />
-                <span className="text-sm md:text-base leading-relaxed">{item}</span>
-              </li>
-            ))}
-          </ul>
+      <div className="grid gap-10 md:grid-cols-2 md:items-stretch">
+        <div className="flex flex-col gap-6">
+          <div className="relative aspect-[4/3] overflow-hidden ring-1 ring-border">
+            <img
+              src={bathSubway.url}
+              alt="Bathroom with subway tile"
+              loading="lazy"
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div className="border border-gold/30 bg-card/40 p-10">
+            <p className="text-xs uppercase tracking-[0.24em] text-gold">Made For</p>
+            <ul className="mt-6 space-y-4">
+              {IDEAL_YES.map((item) => (
+                <li key={item} className="flex items-start gap-3 text-foreground/90">
+                  <Check className="mt-1 h-5 w-5 flex-shrink-0 text-gold" />
+                  <span className="text-sm md:text-base leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-        <div className="border border-border bg-card/40 p-10">
-          <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">Not For</p>
-          <ul className="mt-6 space-y-4">
-            {IDEAL_NO.map((item) => (
-              <li key={item} className="flex items-start gap-3 text-muted-foreground">
-                <X className="mt-1 h-5 w-5 flex-shrink-0 text-silver/60" />
-                <span className="text-sm md:text-base leading-relaxed">{item}</span>
-              </li>
-            ))}
-          </ul>
+        <div className="flex flex-col gap-6">
+          <div className="relative aspect-[4/3] overflow-hidden ring-1 ring-border">
+            <img
+              src={floorWood.url}
+              alt="Wood flooring detail"
+              loading="lazy"
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div className="border border-border bg-card/40 p-10">
+            <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">Not For</p>
+            <ul className="mt-6 space-y-4">
+              {IDEAL_NO.map((item) => (
+                <li key={item} className="flex items-start gap-3 text-muted-foreground">
+                  <X className="mt-1 h-5 w-5 flex-shrink-0 text-silver/60" />
+                  <span className="text-sm md:text-base leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </Section>
@@ -333,16 +369,29 @@ const PRECISION = [
 export function PrecisionSection() {
   return (
     <Section id="precision" className="bg-obsidian">
-      <ul className="mt-14 grid gap-6 md:grid-cols-2">
-        {PRECISION.map((item) => (
-          <li key={item.label} className="border-l border-gold/40 bg-card/40 p-6">
-            <p className="text-xs uppercase tracking-[0.24em] text-gold">{item.label}</p>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground md:text-base">
-              {item.text}
-            </p>
-          </li>
-        ))}
-      </ul>
+      <div className="grid gap-12 lg:grid-cols-5 lg:gap-14">
+        <div className="lg:col-span-3">
+          <ul className="grid gap-6 sm:grid-cols-2">
+            {PRECISION.map((item) => (
+              <li key={item.label} className="border-l border-gold/40 bg-card/40 p-6">
+                <p className="text-xs uppercase tracking-[0.24em] text-gold">{item.label}</p>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground md:text-base">
+                  {item.text}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="relative aspect-[4/5] overflow-hidden ring-1 ring-border lg:col-span-2">
+          <img
+            src={kitchenDark.url}
+            alt="Custom dark cabinet kitchen"
+            loading="lazy"
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-obsidian/70 via-transparent to-transparent" />
+        </div>
+      </div>
       <GoldCTA>Work Directly With The Owner</GoldCTA>
     </Section>
   );
@@ -472,9 +521,18 @@ const EMOTIONAL = [
 export function PathwaysAndEmotionSection() {
   return (
     <Section id="value-add">
+      <div className="relative mb-16 aspect-[16/6] overflow-hidden ring-1 ring-border">
+        <img
+          src={stairs.url}
+          alt="Custom staircase and interior finish"
+          loading="lazy"
+          className="h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-background/20 to-transparent" />
+      </div>
       <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
         <div>
-          <ul className="mt-10 space-y-6">
+          <ul className="space-y-6">
             {PATHWAYS.map((item, i) => (
               <li key={item.title} className="flex gap-5">
                 <span className="font-display text-2xl text-gold">
@@ -490,7 +548,7 @@ export function PathwaysAndEmotionSection() {
         </div>
 
         <div>
-          <p className="mt-4 text-muted-foreground">
+          <p className="text-muted-foreground">
             Because at the end of the day, a beautifully remodeled home is about how it makes your family feel.
           </p>
           <ul className="mt-10 space-y-6">
@@ -506,7 +564,6 @@ export function PathwaysAndEmotionSection() {
       <GoldCTA>Elevate Your Home</GoldCTA>
     </Section>
   );
-
 }
 
 export function EstimateCallSection() {

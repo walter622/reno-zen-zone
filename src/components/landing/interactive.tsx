@@ -10,7 +10,13 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { toast } from "sonner";
 import { Section } from "./primitives";
 
@@ -81,19 +87,13 @@ const formSchema = z.object({
   name: z.string().trim().min(2, "Please enter your full name").max(100),
   email: z.string().trim().email("Please enter a valid email").max(255),
   phone: z.string().trim().min(7, "Please enter a valid phone number").max(30),
-  services: z.array(z.string()).min(1, "Select at least one service"),
+  service: z.string().min(1, "Please select a remodeling service"),
 });
 
 export function ContactFormSection() {
-  const [services, setServices] = useState<string[]>([]);
+  const [service, setService] = useState<string>("");
   const [submitting, setSubmitting] = useState(false);
   const [done, setDone] = useState(false);
-
-  const toggle = (s: string) => {
-    setServices((cur) =>
-      cur.includes(s) ? cur.filter((x) => x !== s) : [...cur, s],
-    );
-  };
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -102,14 +102,13 @@ export function ContactFormSection() {
       name: String(data.get("name") ?? ""),
       email: String(data.get("email") ?? ""),
       phone: String(data.get("phone") ?? ""),
-      services,
+      service,
     });
     if (!parsed.success) {
       toast.error(parsed.error.issues[0]?.message ?? "Please check the form.");
       return;
     }
     setSubmitting(true);
-    // Simulate submission — no backend wired yet.
     await new Promise((r) => setTimeout(r, 800));
     setSubmitting(false);
     setDone(true);
@@ -118,7 +117,7 @@ export function ContactFormSection() {
 
   return (
     <Section id="contact" className="bg-obsidian">
-      <div className="mx-auto max-w-4xl">
+      <div className="mx-auto max-w-xl">
         <div className="text-center">
           <p className="text-muted-foreground">
             Fill out the brief form below and Leonardo will reach out directly to discuss your project.
@@ -128,9 +127,7 @@ export function ContactFormSection() {
         {done ? (
           <div className="mt-14 flex flex-col items-center border border-gold/40 bg-card p-12 text-center">
             <CheckCircle2 className="h-14 w-14 text-gold" strokeWidth={1.2} />
-            <p className="mt-6 font-display text-2xl text-foreground">
-              Thank you.
-            </p>
+            <p className="mt-6 font-display text-2xl text-foreground">Thank you.</p>
             <p className="mt-3 max-w-md text-muted-foreground">
               Your request is in. Leonardo will contact you shortly to schedule your on-site consultation.
             </p>
@@ -189,35 +186,32 @@ export function ContactFormSection() {
                   className="h-12 rounded-lg border-white/10 bg-[#152238] text-foreground placeholder:text-muted-foreground/60 focus-visible:ring-gold"
                 />
               </div>
-            </div>
 
-            <fieldset className="mt-8">
-              <legend className="text-sm font-medium text-white">
-                Remodeling Service Needed
-              </legend>
-              <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                {SERVICE_OPTIONS.map((s) => {
-                  const checked = services.includes(s);
-                  return (
-                    <label
-                      key={s}
-                      className={`flex cursor-pointer items-center gap-3 rounded-lg border px-4 py-3 transition-colors ${
-                        checked
-                          ? "border-gold bg-gold/5 text-foreground"
-                          : "border-white/10 bg-[#152238] text-muted-foreground hover:border-gold/40"
-                      }`}
-                    >
-                      <Checkbox
-                        checked={checked}
-                        onCheckedChange={() => toggle(s)}
-                        className="data-[state=checked]:bg-gold data-[state=checked]:border-gold data-[state=checked]:text-primary-foreground"
-                      />
-                      <span className="text-sm">{s}</span>
-                    </label>
-                  );
-                })}
+              <div className="space-y-2">
+                <Label htmlFor="service" className="text-sm font-medium text-white">
+                  Remodeling Service Needed
+                </Label>
+                <Select value={service} onValueChange={setService}>
+                  <SelectTrigger
+                    id="service"
+                    className="h-12 rounded-lg border-white/10 bg-[#152238] text-foreground focus:ring-gold data-[placeholder]:text-muted-foreground/60"
+                  >
+                    <SelectValue placeholder="Select a service" />
+                  </SelectTrigger>
+                  <SelectContent className="border-white/10 bg-[#152238] text-foreground">
+                    {SERVICE_OPTIONS.map((s) => (
+                      <SelectItem
+                        key={s}
+                        value={s}
+                        className="focus:bg-gold/10 focus:text-foreground"
+                      >
+                        {s}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
               </div>
-            </fieldset>
+            </div>
 
             <Button
               type="submit"
@@ -229,7 +223,6 @@ export function ContactFormSection() {
             </Button>
           </form>
         )}
-
       </div>
     </Section>
   );
