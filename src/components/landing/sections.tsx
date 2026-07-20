@@ -150,17 +150,28 @@ export function LateLessonsSection() {
 export function ValuePropositionSection() {
   return (
     <Section id="value" className="bg-obsidian">
-      <div className="mx-auto max-w-4xl text-center">
-        <GoldRule className="mx-auto mt-10 w-24" />
-        <p className="mt-10 text-base leading-relaxed text-muted-foreground md:text-lg">
-          While the American remodeling market forces you to choose between rigid bureaucratic corporations and disorganized independent crews, My Team Renovation brings the perfect balance: the precision and punctuality of corporate project management, backed by the care and dedication of a family-owned local business.
-        </p>
-        <p className="mt-8 font-display text-2xl leading-snug text-foreground md:text-3xl">
-          Our promise is simple: to elevate your living space while completely removing the stress of remodeling.
-        </p>
-        <p className="mt-8 text-base leading-relaxed text-muted-foreground md:text-lg">
-          You will never be left hanging by an unanswered voicemail. We plan every phase down to the millimeter so you know exactly when the project will be handed over—with zero surprises and zero excuses. You aren't paying for labor. You are investing in a seamless, secure transformation that instantly boosts your home's market value.
-        </p>
+      <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="relative aspect-[4/5] overflow-hidden ring-1 ring-border">
+          <img
+            src={bathMarble.url}
+            alt="Marble bathroom with round mirror"
+            loading="lazy"
+            className="h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-tr from-obsidian/60 via-transparent to-transparent" />
+        </div>
+        <div>
+          <GoldRule className="w-24" />
+          <p className="mt-8 text-base leading-relaxed text-muted-foreground md:text-lg">
+            While the American remodeling market forces you to choose between rigid bureaucratic corporations and disorganized independent crews, My Team Renovation brings the perfect balance: the precision and punctuality of corporate project management, backed by the care and dedication of a family-owned local business.
+          </p>
+          <p className="mt-8 font-display text-2xl leading-snug text-foreground md:text-3xl">
+            Our promise is simple: to elevate your living space while completely removing the stress of remodeling.
+          </p>
+          <p className="mt-8 text-base leading-relaxed text-muted-foreground md:text-lg">
+            You will never be left hanging by an unanswered voicemail. We plan every phase down to the millimeter so you know exactly when the project will be handed over—with zero surprises and zero excuses.
+          </p>
+        </div>
       </div>
     </Section>
   );
