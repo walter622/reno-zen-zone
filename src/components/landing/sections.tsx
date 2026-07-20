@@ -502,9 +502,18 @@ const EMOTIONAL = [
 export function PathwaysAndEmotionSection() {
   return (
     <Section id="value-add">
+      <div className="relative mb-16 aspect-[16/6] overflow-hidden ring-1 ring-border">
+        <img
+          src={stairs.url}
+          alt="Custom staircase and interior finish"
+          loading="lazy"
+          className="h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/70 via-background/20 to-transparent" />
+      </div>
       <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
         <div>
-          <ul className="mt-10 space-y-6">
+          <ul className="space-y-6">
             {PATHWAYS.map((item, i) => (
               <li key={item.title} className="flex gap-5">
                 <span className="font-display text-2xl text-gold">
@@ -520,7 +529,7 @@ export function PathwaysAndEmotionSection() {
         </div>
 
         <div>
-          <p className="mt-4 text-muted-foreground">
+          <p className="text-muted-foreground">
             Because at the end of the day, a beautifully remodeled home is about how it makes your family feel.
           </p>
           <ul className="mt-10 space-y-6">
@@ -536,7 +545,6 @@ export function PathwaysAndEmotionSection() {
       <GoldCTA>Elevate Your Home</GoldCTA>
     </Section>
   );
-
 }
 
 export function EstimateCallSection() {
