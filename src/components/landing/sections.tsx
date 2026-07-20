@@ -240,28 +240,48 @@ const IDEAL_NO = [
 export function IdealClientSection() {
   return (
     <Section id="ideal" className="bg-obsidian">
-      <div className="mt-14 grid gap-10 md:grid-cols-2">
-        <div className="border border-gold/30 bg-card/40 p-10">
-          <p className="text-xs uppercase tracking-[0.24em] text-gold">Made For</p>
-          <ul className="mt-6 space-y-4">
-            {IDEAL_YES.map((item) => (
-              <li key={item} className="flex items-start gap-3 text-foreground/90">
-                <Check className="mt-1 h-5 w-5 flex-shrink-0 text-gold" />
-                <span className="text-sm md:text-base leading-relaxed">{item}</span>
-              </li>
-            ))}
-          </ul>
+      <div className="grid gap-10 md:grid-cols-2 md:items-stretch">
+        <div className="flex flex-col gap-6">
+          <div className="relative aspect-[4/3] overflow-hidden ring-1 ring-border">
+            <img
+              src={bathSubway.url}
+              alt="Bathroom with subway tile"
+              loading="lazy"
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div className="border border-gold/30 bg-card/40 p-10">
+            <p className="text-xs uppercase tracking-[0.24em] text-gold">Made For</p>
+            <ul className="mt-6 space-y-4">
+              {IDEAL_YES.map((item) => (
+                <li key={item} className="flex items-start gap-3 text-foreground/90">
+                  <Check className="mt-1 h-5 w-5 flex-shrink-0 text-gold" />
+                  <span className="text-sm md:text-base leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-        <div className="border border-border bg-card/40 p-10">
-          <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">Not For</p>
-          <ul className="mt-6 space-y-4">
-            {IDEAL_NO.map((item) => (
-              <li key={item} className="flex items-start gap-3 text-muted-foreground">
-                <X className="mt-1 h-5 w-5 flex-shrink-0 text-silver/60" />
-                <span className="text-sm md:text-base leading-relaxed">{item}</span>
-              </li>
-            ))}
-          </ul>
+        <div className="flex flex-col gap-6">
+          <div className="relative aspect-[4/3] overflow-hidden ring-1 ring-border">
+            <img
+              src={floorWood.url}
+              alt="Wood flooring detail"
+              loading="lazy"
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div className="border border-border bg-card/40 p-10">
+            <p className="text-xs uppercase tracking-[0.24em] text-muted-foreground">Not For</p>
+            <ul className="mt-6 space-y-4">
+              {IDEAL_NO.map((item) => (
+                <li key={item} className="flex items-start gap-3 text-muted-foreground">
+                  <X className="mt-1 h-5 w-5 flex-shrink-0 text-silver/60" />
+                  <span className="text-sm md:text-base leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </Section>
